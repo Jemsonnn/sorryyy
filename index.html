@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lambinggg</title>
+    <style>
+        body {
+            text-align: center;
+            padding: 50px;
+        }
+        #buttonContainer {
+            position: relative;
+        }
+        #yesButton, #noButton {
+            display: inline-block;
+        }
+        #noButton {
+            position: absolute;
+            left: 100px; /* Adjust the initial position as needed */
+            top: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Sorry na my love? :(</h2>
+
+    <div id="buttonContainer">
+        <button id="yesButton" onclick="showResponse('yes')">Yes</button>
+        <button id="noButton" onclick="moveToRandomPosition('noButton')">No</button>
+    </div>
+
+    <script>
+        function showResponse(response) {
+            if (response === 'no') {
+                moveToRandomPosition('noButton');
+            } else {
+                alert("I know we're still not, pero I just want to let you know that I really love you. I'm always proud of you my love! Gagalingan mo palagi okay? Goodluck sa review later😚");
+            }
+        }
+
+        function moveToRandomPosition(elementId) {
+            var element = document.getElementById(elementId);
+            element.style.left = Math.random() * (window.innerWidth - element.clientWidth) + 'px';
+            element.style.top = Math.random() * (window.innerHeight - element.clientHeight) + 'px';
+        }
+    </script>
+
+</body>
+</html>
